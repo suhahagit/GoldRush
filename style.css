@@ -1,0 +1,99 @@
+#container {
+  height: 100vh;
+  display: grid;
+  background-color: rgb(223, 187, 198);
+  grid-template-rows: 30fr 1fr 3fr;
+  grid-template-areas:
+    "g"
+    "p"
+    "f";
+}
+
+#board-container {
+  display: grid;
+  align-self: center;
+  justify-self: center;
+}
+
+.foot {
+  display: grid;
+  grid-area: f;
+  grid-template-columns: 1fr 1fr 3fr;
+  grid-template-areas:
+    "p"
+    "i";
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.input {
+  margin: 2px;
+}
+
+.players {
+  display: grid;
+  grid-area: p;
+  grid-template-areas: "p1 p2";
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+}
+
+#btn {
+  box-shadow: inset 0 1px 3px #ddd;
+  background-color: plum;
+  font-weight: bold;
+  font-family: "Orbitron", sans-serif;
+}
+
+.p1 {
+  display: grid;
+  grid-area: p1;
+  padding-left: 15px;
+  color: royalblue;
+}
+
+.p2 {
+  display: grid;
+  grid-area: p2;
+  justify-self: end;
+  padding-right: 20px;
+  color: brown;
+}
+
+.tile {
+  width: 130px;
+  height: 55px;
+  border: 2px solid rgb(90, 44, 90);
+}
+
+table {
+  border: none;
+  border-collapse: collapse;
+  padding: 0;
+  margin: 0;
+}
+
+.w {
+  background-color: rgba(228, 169, 115, 0.911);
+}
+
+.c {
+  background-color: rgb(250, 250, 134);
+  shape-outside: circle();
+  clip-path: circle();
+  transform: scale(0.3);
+}
+
+.f {
+  shape-outside: circle();
+  clip-path: circle();
+  background-color: royalblue;
+  transform: scale(0.6);
+}
+
+.s {
+  shape-outside: circle();
+  clip-path: circle();
+  background-color: brown;
+  transform: scale(0.6);
+}
