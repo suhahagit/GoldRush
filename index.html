@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gold Rush</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div id = "container">
+        <div id = "board-container"></div>
+        <div class = "players">
+            <p class = "p1">PlAYER 1: 0</p>
+            <p class = "p2">PlAYER 2: 0</p>
+        </div>
+        <div class = "foot">
+            <input id = "rows" class = "input" type = "number" placeholder="Number of rows">
+            <input id = "cols" class = "input" type = "number" placeholder="Number of columns">
+            <button id = "btn" class = "input" onclick="startGame()">START</button>
+        </div>
+    </div>
+
+    <script id = "board-template" type = "text/x-handlebars-template">
+        <table>
+            {{#each board}}
+                <tr>
+                    {{#each this}}
+                        <td class = "tile {{this}}"></td>
+                    {{/each}}
+                </tr>
+            {{/each}}
+        </table>
+    </script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src = 'Matrix.js'></script>
+    <script src = 'GoldRush.js'></script>
+    <script src = 'Renderer.js'></script>
+    <script src = 'main.js'></script>
+</body>
+</html>
